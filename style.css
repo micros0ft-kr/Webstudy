@@ -1,9 +1,11 @@
 body{
     margin:0;
   }
-  a {
-    color:black;
+  a:link {
     text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
   }
   h1 {
     font-size:45px;
@@ -19,12 +21,18 @@ body{
     padding:20px;
   }
   body.night {
-    background-color: black;
+    background-color: #282828;
     color: white;
   }
   body.day {
     background-color: white;
     color: black;
+  }
+  .day a {
+    color: black;
+  }
+  .night a {
+    color: white;
   }
   #active {
     color:red;
@@ -44,7 +52,7 @@ body{
   }
 .plusJv {
     display: grid;
-    grid-template-columns:10fr 1fr 1fr;
+    grid-template-columns:10fr 1fr;
   }
 .plusJv input {
   margin-top: 20px;
@@ -59,10 +67,5 @@ body{
     }
     h1 {
       border-bottom:none;
-    }
-  }
-  @media (backgroundColor:black) {
-    a {
-      color: white;
     }
   }

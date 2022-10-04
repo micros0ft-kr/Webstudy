@@ -15,14 +15,17 @@
   <div>
     <div class="plusJv">
       <div><h2>JavaScript</h2></div>
-      <div><input type="button" value="day" onclick="
-        document.querySelector('body').classList.remove('night');
-        document.querySelector('body').classList.add('day');
-        "></div>
-      <div><input type="button" value="night" onclick="
-        document.querySelector('body').classList.remove('day');
-        document.querySelector('body').classList.add('night');
-        "></div>
+      <div><input type="button" value="Darkmode" onclick="
+        const target = document.querySelector('body')
+        if(target.classList.contains('night')) {
+          target.classList.replace('night','day');
+          this.value = 'Darkmode';
+        } else {
+          target.classList.replace('day','night');
+          this.value = 'Daymode';
+        }
+        ">
+      </div>
     </div>
     <p><img src="JSpic.jpg" width="40%"></p>
     <p style="margin-top:45px;0">JavaScript often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for web page behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.
